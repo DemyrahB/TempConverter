@@ -1,41 +1,85 @@
+// Complete the following functions to make our program work!
 
+/**
+ * Takes a F number and returns the number to C
+ * @param {string} fahren temperature in degrees F
+ * @returns {number} the number of degrees C
+ */
 
-
-function convertToCelsius(fahrenheit){
-    return (fahrenheit-32)*5/9;
+function convertToCelsius(fahren) {
+  let Temp = fahren;
+  let convertToFahrenheit = Temp - 32 * 5/9;
 }
-function createMessage(fahrenheit,celsius){
-    let message = "Thank you for participating";
-    const numF= fahrenheit * 1;
+const fahrenheit = ''
+
+let vcoldTemp = fahrenheit <= 32
+    if (vcoldTemp) {
+        console.log("very cold")
+    }
+
+let coldTemp = fahrenheit <= 64
+    if (coldTemp){
+        console.log("cold");
+    }
+
+let warmTemp = fahrenheit <= 86
+    if (warmTemp){
+        console.log("warm");
+    }
+
+let hotTemp = fahrenheit <= 100
+    if (hotTemp){
+        console.log("hot!");
+    }
+
+
+/**
+ * Takes both numbers (F, C) and display a message with
+ * both numbers and how that temp makes you feel using
+ * this chart
+ *
+ *   Temp      Feels
+ * ---------|----------
+ *   < 32   |  "very cold"
+ *   < 64   |  "cold"
+ *   < 86   |  "warm"
+ *   < 100  |  "hot"
+ *
+//  * @param {212} fahren
+//  * @param {100} celc
+//  */
+function createMessage(fahren, celc) {
+    alert (fahren, celc) 
+ }
+
+// /**
+//  * Takes a number and returns a random integer from 0 to the limit
+//  * @param {number} limit
+//  * @returns {number} a number between 0 and the int passed in
+//  */
+function rand(max) {
+    return (Math.floor(convertToFahrenheit) * max)
 }
 
-if (numF === 212){
-    message = "That's the boiling point of water";
-   }   else if (numF === 32){
-        message = "That's the freezing point of water";
-    }
-    else if (numF === -109){
-        message = "That's the temperature of dry ice"
-    }
-    else if (numF === 406){
-        message = "That's the temperature of Saturated Liquid";
-    }
-return `${fahrenheit} F is ${celsius} C. ${message}`;
+// // -------------------- DO NOT CHANGE THE CODE BELOW ---------------------- //
 
-
-function rand(limit){
-    return Math.round(Math.random()*limit);
-}
-
-let inputFahrenheit = prompt('enter a number and I will convert that number from fahrenheit to celsius');
-let convertedCelsius = convertToCelsius(inputFahrenheit);
-let output = createMessage(inputFahrenheit, convertedCelsius);
-console.log(output);
-
-
-
-
-
-
-
-
+let fahren = prompt(
+  "enter a number, we will convert that number from fahrenheit to celcius"
+);
+let celc = convertToCelsius(fahren);
+let output = createMessage(fahren, celc);
+console.log(output)
+fahren = prompt(
+  "Lets try that again. enter a number, we will convert that number from fahrenheit to celcius"
+);
+celc = convertToCelsius(fahren);
+output = createMessage(fahren, celc);
+console.log(output)
+fahren = rand(110);
+celc = convertToCelsius(fahren);
+output = createMessage(fahren, celc);
+console.log(output)
+fahren = rand(110);
+celc = convertToCelsius(fahren);
+output = createMessage(fahren, celc);
+console.log(output)
