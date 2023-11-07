@@ -7,32 +7,9 @@
  */
 
 function convertToCelsius(fahren) {
-  let Temp = fahren;
-  let convertToFahrenheit = Temp - 32 * 5/9;
+    let celcius = (fahren-32 * 5/9)
+    return celcius
 }
-const fahrenheit = ''
-
-let vcoldTemp = fahrenheit <= 32
-    if (vcoldTemp) {
-        console.log("very cold")
-    }
-
-let coldTemp = fahrenheit <= 64
-    if (coldTemp){
-        console.log("cold");
-    }
-
-let warmTemp = fahrenheit <= 86
-    if (warmTemp){
-        console.log("warm");
-    }
-
-let hotTemp = fahrenheit <= 100
-    if (hotTemp){
-        console.log("hot!");
-    }
-
-
 /**
  * Takes both numbers (F, C) and display a message with
  * both numbers and how that temp makes you feel using
@@ -49,16 +26,27 @@ let hotTemp = fahrenheit <= 100
 //  * @param {100} celc
 //  */
 function createMessage(fahren, celc) {
-    alert (fahren, celc) 
+    return `the current temp in fahrenheit: ${fahren} and the temp in celcius is ${celc}. That means it is ${temperature} outside`
  }
-
+ let  ahren = fahrenheit <= 32
+    if (fahren <32) {
+        temperature = "very cold"
+    } else if (fahren >=32 && fahren <64){
+        temperature = "cold"
+    } else if (fahren >=64 && fahren <86){
+        temperature = "warm"
+    }else if (fahren >100){
+        temperature = "hot"
+    }
+ return `the current temp in fahrenheit: ${fahren} and the temp in celcius is ${celc}. That means it is ${temperature} outside`
 // /**
 //  * Takes a number and returns a random integer from 0 to the limit
 //  * @param {number} limit
 //  * @returns {number} a number between 0 and the int passed in
 //  */
-function rand(max) {
-    return (Math.floor(convertToFahrenheit) * max)
+function rand(limit) {
+    const randomNum = Math.floor(Math.random()*(limit - 0) + 0)
+    return randomNum
 }
 
 // // -------------------- DO NOT CHANGE THE CODE BELOW ---------------------- //
